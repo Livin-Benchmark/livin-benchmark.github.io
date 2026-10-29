@@ -149,3 +149,7 @@ html{scroll-padding-top:var(--header-offset)}
 @media(min-width:701px){
   .hero h1{position:relative;left:50%;transform:translateX(-50%);width:min(134%,100vw);max-width:1760px;margin-inline:0}
 }
+
+.navigation-videos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
+.navigation-videos video{aspect-ratio:16/9;background:#171717;border-radius:5px}
+@media(max-width:700px){.navigation-videos{grid-template-columns:1fr;gap:14px}}
