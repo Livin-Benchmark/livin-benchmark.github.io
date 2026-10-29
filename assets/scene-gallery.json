@@ -1,26 +1,86 @@
 [
   {
     "id": "009",
-    "status": "sample",
+    "status": "render-preview",
     "sourceVersion": "manual-source-user-confirmed-20261030",
     "overview": {
-      "image": "assets/gallery/009-8k-sample/scene-009-overview.webp",
+      "image": "assets/gallery/009/scene-009-overview.webp",
       "width": 2048,
       "height": 1422
     },
-    "thumbnail": "assets/gallery/009-8k-sample/thumbnail.webp",
+    "thumbnail": "assets/gallery/009/thumbnail.webp",
     "defaultPoint": "1",
     "points": [
       {
         "id": "1",
-        "label": "Living Room",
+        "label": "Living Room · 1",
         "room": "living_room",
         "marker": [
           0.5282519459724426,
           0.5528037846088409
         ],
         "initialYaw": 0,
-        "image": "assets/gallery/009-8k-sample/scene-009-panorama-1.webp",
+        "image": "assets/gallery/009/scene-009-panorama-1.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "4",
+        "label": "Balcony",
+        "room": "balcony",
+        "marker": [
+          0.4134453237056732,
+          0.7657271921634674
+        ],
+        "image": "assets/gallery/009/scene-009-panorama-4.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "5",
+        "label": "Bathroom A",
+        "room": "bathroom_a",
+        "marker": [
+          0.37228360772132874,
+          0.4432593584060669
+        ],
+        "image": "assets/gallery/009/scene-009-panorama-5.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "7",
+        "label": "Bedroom A",
+        "room": "bedroom_a",
+        "marker": [
+          0.5771823525428772,
+          0.6885532140731812
+        ],
+        "image": "assets/gallery/009/scene-009-panorama-7.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "10",
+        "label": "Kitchen",
+        "room": "kitchen",
+        "marker": [
+          0.6290904879570007,
+          0.4592059850692749
+        ],
+        "image": "assets/gallery/009/scene-009-panorama-10.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "11",
+        "label": "Study",
+        "room": "study",
+        "marker": [
+          0.5410223603248596,
+          0.39572715759277344
+        ],
+        "image": "assets/gallery/009/scene-009-panorama-11.webp",
         "width": 8192,
         "height": 4096
       }
@@ -28,79 +88,604 @@
   },
   {
     "id": "010",
-    "status": "pending",
+    "status": "render-preview",
+    "sourceVersion": "manual-source-user-confirmed-20261030",
     "overview": {
-      "image": "assets/scene-010-overview.webp",
-      "width": 1440,
-      "height": 1000
+      "image": "assets/gallery/010/scene-010-overview.webp",
+      "width": 2048,
+      "height": 1422
     },
-    "defaultPoint": null,
-    "points": []
+    "thumbnail": "assets/gallery/010/thumbnail.webp",
+    "defaultPoint": "1",
+    "points": [
+      {
+        "id": "1",
+        "label": "Living Room · 1",
+        "room": "living_room",
+        "marker": [
+          0.5124282836914062,
+          0.5609009563922882
+        ],
+        "image": "assets/gallery/010/scene-010-panorama-1.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "4",
+        "label": "Balcony",
+        "room": "balcony",
+        "marker": [
+          0.39714518189430237,
+          0.7020622491836548
+        ],
+        "image": "assets/gallery/010/scene-010-panorama-4.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "5",
+        "label": "Bathroom A",
+        "room": "bathroom_a",
+        "marker": [
+          0.3714844286441803,
+          0.4391549825668335
+        ],
+        "image": "assets/gallery/010/scene-010-panorama-5.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "7",
+        "label": "Bedroom A",
+        "room": "bedroom_a",
+        "marker": [
+          0.5631430149078369,
+          0.7808115482330322
+        ],
+        "image": "assets/gallery/010/scene-010-panorama-7.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "9",
+        "label": "Open Kitchen",
+        "room": "open_kitchen",
+        "marker": [
+          0.5723862648010254,
+          0.5067363977432251
+        ],
+        "image": "assets/gallery/010/scene-010-panorama-9.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "10",
+        "label": "Walk In Closet",
+        "room": "walk_in_closet",
+        "marker": [
+          0.5073683857917786,
+          0.2566044330596924
+        ],
+        "image": "assets/gallery/010/scene-010-panorama-10.webp",
+        "width": 8192,
+        "height": 4096
+      }
+    ]
   },
   {
     "id": "012",
-    "status": "pending",
+    "status": "render-preview",
+    "sourceVersion": "manual-source-user-confirmed-20261030",
     "overview": {
-      "image": "assets/scene-012-overview.webp",
-      "width": 1440,
-      "height": 1000
+      "image": "assets/gallery/012/scene-012-overview.webp",
+      "width": 2048,
+      "height": 1422
     },
-    "defaultPoint": null,
-    "points": []
+    "thumbnail": "assets/gallery/012/thumbnail.webp",
+    "defaultPoint": "1",
+    "points": [
+      {
+        "id": "1",
+        "label": "Living Room · 1",
+        "room": "living_room",
+        "marker": [
+          0.48097747564315796,
+          0.5023825168609619
+        ],
+        "image": "assets/gallery/012/scene-012-panorama-1.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "4",
+        "label": "Balcony A",
+        "room": "balcony_a",
+        "marker": [
+          0.4748448133468628,
+          0.7091076672077179
+        ],
+        "image": "assets/gallery/012/scene-012-panorama-4.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "5",
+        "label": "Bathroom A",
+        "room": "bathroom_a",
+        "marker": [
+          0.30055350065231323,
+          0.4020422697067261
+        ],
+        "image": "assets/gallery/012/scene-012-panorama-5.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "7",
+        "label": "Bedroom A",
+        "room": "bedroom_a",
+        "marker": [
+          0.6038399934768677,
+          0.6802983582019806
+        ],
+        "image": "assets/gallery/012/scene-012-panorama-7.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "8",
+        "label": "Bedroom B",
+        "room": "bedroom_b",
+        "marker": [
+          0.22086329758167267,
+          0.5345605611801147
+        ],
+        "image": "assets/gallery/012/scene-012-panorama-8.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "11",
+        "label": "Kitchen",
+        "room": "kitchen",
+        "marker": [
+          0.6041752099990845,
+          0.5124200582504272
+        ],
+        "image": "assets/gallery/012/scene-012-panorama-11.webp",
+        "width": 8192,
+        "height": 4096
+      }
+    ]
   },
   {
     "id": "040",
-    "status": "pending",
+    "status": "render-preview",
+    "sourceVersion": "manual-source-user-confirmed-20261030",
     "overview": {
-      "image": "assets/scene-040-overview.webp",
-      "width": 1440,
-      "height": 1000
+      "image": "assets/gallery/040/scene-040-overview.webp",
+      "width": 2048,
+      "height": 1422
     },
-    "defaultPoint": null,
-    "points": []
+    "thumbnail": "assets/gallery/040/thumbnail.webp",
+    "defaultPoint": "1",
+    "points": [
+      {
+        "id": "1",
+        "label": "Living Room · 1",
+        "room": "living_room",
+        "marker": [
+          0.3559008538722992,
+          0.43085235357284546
+        ],
+        "image": "assets/gallery/040/scene-040-panorama-1.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "4",
+        "label": "Balcony A",
+        "room": "balcony_a",
+        "marker": [
+          0.24823284149169922,
+          0.6043300032615662
+        ],
+        "image": "assets/gallery/040/scene-040-panorama-4.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "6",
+        "label": "Bathroom A",
+        "room": "bathroom_a",
+        "marker": [
+          0.6977877616882324,
+          0.6042030453681946
+        ],
+        "image": "assets/gallery/040/scene-040-panorama-6.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "9",
+        "label": "Bedroom A",
+        "room": "bedroom_a",
+        "marker": [
+          0.3750891387462616,
+          0.6203339099884033
+        ],
+        "image": "assets/gallery/040/scene-040-panorama-9.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "10",
+        "label": "Bedroom B",
+        "room": "bedroom_b",
+        "marker": [
+          0.4421587586402893,
+          0.6957475543022156
+        ],
+        "image": "assets/gallery/040/scene-040-panorama-10.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "13",
+        "label": "Kitchen",
+        "room": "kitchen",
+        "marker": [
+          0.5171722769737244,
+          0.4240853786468506
+        ],
+        "image": "assets/gallery/040/scene-040-panorama-13.webp",
+        "width": 8192,
+        "height": 4096
+      }
+    ]
   },
   {
     "id": "087",
-    "status": "pending",
+    "status": "render-preview",
+    "sourceVersion": "manual-source-user-confirmed-20261030",
     "overview": {
-      "image": "assets/scene-087-overview.webp",
-      "width": 1440,
-      "height": 1000
+      "image": "assets/gallery/087/scene-087-overview.webp",
+      "width": 2048,
+      "height": 1422
     },
-    "defaultPoint": null,
-    "points": []
+    "thumbnail": "assets/gallery/087/thumbnail.webp",
+    "defaultPoint": "1",
+    "points": [
+      {
+        "id": "1",
+        "label": "Living Room · 1",
+        "room": "living_room",
+        "marker": [
+          0.48326894640922546,
+          0.4578526020050049
+        ],
+        "image": "assets/gallery/087/scene-087-panorama-1.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "4",
+        "label": "Balcony",
+        "room": "balcony",
+        "marker": [
+          0.36864396929740906,
+          0.6997115910053253
+        ],
+        "image": "assets/gallery/087/scene-087-panorama-4.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "5",
+        "label": "Bathroom",
+        "room": "bathroom",
+        "marker": [
+          0.5743075609207153,
+          0.45768213272094727
+        ],
+        "image": "assets/gallery/087/scene-087-panorama-5.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "6",
+        "label": "Bedroom A",
+        "room": "bedroom_a",
+        "marker": [
+          0.39934271574020386,
+          0.672696977853775
+        ],
+        "image": "assets/gallery/087/scene-087-panorama-6.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "7",
+        "label": "Bedroom B",
+        "room": "bedroom_b",
+        "marker": [
+          0.5711573362350464,
+          0.3397289514541626
+        ],
+        "image": "assets/gallery/087/scene-087-panorama-7.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "8",
+        "label": "Kitchen",
+        "room": "kitchen",
+        "marker": [
+          0.5732102990150452,
+          0.5460425317287445
+        ],
+        "image": "assets/gallery/087/scene-087-panorama-8.webp",
+        "width": 8192,
+        "height": 4096
+      }
+    ]
   },
   {
     "id": "097",
-    "status": "pending",
+    "status": "render-preview",
+    "sourceVersion": "manual-source-user-confirmed-20261030",
     "overview": {
-      "image": "assets/scene-097-overview.webp",
-      "width": 1440,
-      "height": 1000
+      "image": "assets/gallery/097/scene-097-overview.webp",
+      "width": 2048,
+      "height": 1422
     },
-    "defaultPoint": null,
-    "points": []
+    "thumbnail": "assets/gallery/097/thumbnail.webp",
+    "defaultPoint": "1",
+    "points": [
+      {
+        "id": "1",
+        "label": "Living Room · 1",
+        "room": "living_room",
+        "marker": [
+          0.4876454174518585,
+          0.5685558021068573
+        ],
+        "image": "assets/gallery/097/scene-097-panorama-1.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "4",
+        "label": "Balcony",
+        "room": "balcony",
+        "marker": [
+          0.3604704439640045,
+          0.3540310859680176
+        ],
+        "image": "assets/gallery/097/scene-097-panorama-4.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "5",
+        "label": "Bathroom",
+        "room": "bathroom",
+        "marker": [
+          0.5277158617973328,
+          0.4885317087173462
+        ],
+        "image": "assets/gallery/097/scene-097-panorama-5.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "6",
+        "label": "Bedroom A",
+        "room": "bedroom_a",
+        "marker": [
+          0.4152211546897888,
+          0.39034080505371094
+        ],
+        "image": "assets/gallery/097/scene-097-panorama-6.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "7",
+        "label": "Bedroom B",
+        "room": "bedroom_b",
+        "marker": [
+          0.3441528379917145,
+          0.48070937395095825
+        ],
+        "image": "assets/gallery/097/scene-097-panorama-7.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "9",
+        "label": "Kitchen",
+        "room": "kitchen",
+        "marker": [
+          0.6147502064704895,
+          0.6296036243438721
+        ],
+        "image": "assets/gallery/097/scene-097-panorama-9.webp",
+        "width": 8192,
+        "height": 4096
+      }
+    ]
   },
   {
     "id": "148",
-    "status": "pending",
+    "status": "render-preview",
+    "sourceVersion": "manual-source-user-confirmed-20261030",
     "overview": {
-      "image": "assets/scene-148-overview.webp",
-      "width": 1440,
-      "height": 1000
+      "image": "assets/gallery/148/scene-148-overview.webp",
+      "width": 2048,
+      "height": 1422
     },
-    "defaultPoint": null,
-    "points": []
+    "thumbnail": "assets/gallery/148/thumbnail.webp",
+    "defaultPoint": "1",
+    "points": [
+      {
+        "id": "1",
+        "label": "Living Room · 1",
+        "room": "living_room",
+        "marker": [
+          0.3623768985271454,
+          0.5907920300960541
+        ],
+        "image": "assets/gallery/148/scene-148-panorama-1.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "4",
+        "label": "Balcony",
+        "room": "balcony",
+        "marker": [
+          0.3059740960597992,
+          0.6826539039611816
+        ],
+        "image": "assets/gallery/148/scene-148-panorama-4.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "5",
+        "label": "Bathroom A",
+        "room": "bathroom_a",
+        "marker": [
+          0.6884071826934814,
+          0.41205763816833496
+        ],
+        "image": "assets/gallery/148/scene-148-panorama-5.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "7",
+        "label": "Bedroom A",
+        "room": "bedroom_a",
+        "marker": [
+          0.4335976243019104,
+          0.7124388515949249
+        ],
+        "image": "assets/gallery/148/scene-148-panorama-7.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "8",
+        "label": "Bedroom B",
+        "room": "bedroom_b",
+        "marker": [
+          0.5972925424575806,
+          0.3769339919090271
+        ],
+        "image": "assets/gallery/148/scene-148-panorama-8.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "9",
+        "label": "Kitchen",
+        "room": "kitchen",
+        "marker": [
+          0.49826839566230774,
+          0.43063682317733765
+        ],
+        "image": "assets/gallery/148/scene-148-panorama-9.webp",
+        "width": 8192,
+        "height": 4096
+      }
+    ]
   },
   {
     "id": "179",
-    "status": "pending",
+    "status": "render-preview",
+    "sourceVersion": "manual-source-user-confirmed-20261030",
     "overview": {
-      "image": "assets/scene-179-overview.webp",
-      "width": 1440,
-      "height": 1000
+      "image": "assets/gallery/179/scene-179-overview.webp",
+      "width": 2048,
+      "height": 1422
     },
-    "defaultPoint": null,
-    "points": []
+    "thumbnail": "assets/gallery/179/thumbnail.webp",
+    "defaultPoint": "1",
+    "points": [
+      {
+        "id": "1",
+        "label": "Living Room · 1",
+        "room": "living_room",
+        "marker": [
+          0.41917863488197327,
+          0.5445148348808289
+        ],
+        "image": "assets/gallery/179/scene-179-panorama-1.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "6",
+        "label": "Bathroom A",
+        "room": "bathroom_a",
+        "marker": [
+          0.5331299901008606,
+          0.5007732808589935
+        ],
+        "image": "assets/gallery/179/scene-179-panorama-6.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "9",
+        "label": "Bedroom A",
+        "room": "bedroom_a",
+        "marker": [
+          0.5889075398445129,
+          0.5474840998649597
+        ],
+        "image": "assets/gallery/179/scene-179-panorama-9.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "12",
+        "label": "Dining Room · 1",
+        "room": "dining_room",
+        "marker": [
+          0.4876939058303833,
+          0.4275534152984619
+        ],
+        "image": "assets/gallery/179/scene-179-panorama-12.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "14",
+        "label": "Kitchen",
+        "room": "kitchen",
+        "marker": [
+          0.4869518578052521,
+          0.2736949324607849
+        ],
+        "image": "assets/gallery/179/scene-179-panorama-14.webp",
+        "width": 8192,
+        "height": 4096
+      },
+      {
+        "id": "16",
+        "label": "Study",
+        "room": "study",
+        "marker": [
+          0.4439603090286255,
+          0.6994087398052216
+        ],
+        "image": "assets/gallery/179/scene-179-panorama-16.webp",
+        "width": 8192,
+        "height": 4096
+      }
+    ]
   }
 ]

@@ -28,7 +28,6 @@ export async function initExplorer() {
     else window.addEventListener('load',warmWhenIdle,{once:true});
   });
   let markers=[];
-  const anchor=document.createComment('Panorama home');pano.before(anchor);
   async function getViewer(){
     if(!viewerPromise)viewerPromise=import('./panorama-viewer.js').then(m=>{viewer=m.createPanoramaViewer(pano);return viewer;}).catch(()=>({show:async()=>false,clear(){}}));
     return viewerPromise;
@@ -63,7 +62,7 @@ export async function initExplorer() {
   }
   async function selectPoint(data){
     point=data;const ticket=++pointTicket;syncSelection();viewer?.clear();fallback.hidden=true;fallback.removeAttribute('src');
-    pano.hidden=false;$('#panorama-pending').hidden=true;$('.panorama-full').hidden=true;$('#panorama-retry').hidden=true;
+    pano.hidden=false;$('#panorama-pending').hidden=true;$('#panorama-retry').hidden=true;
     $('#panorama-status').textContent='Loading panorama…';pano.setAttribute('aria-busy','true');
     try{
       await panoramaReady;if(ticket!==pointTicket)return;
@@ -71,17 +70,18 @@ export async function initExplorer() {
       fallback.src=data.image;fallback.alt=`Scene ${selected.id} · ${data.label} panorama`;fallback.hidden=false;
       const current=await getViewer();if(ticket!==pointTicket)return;
       await current.show(data.image,data.initialYaw);if(ticket!==pointTicket)return;
-      $('.panorama-full').hidden=false;$('#panorama-status').textContent='';
+      $('#panorama-status').textContent='';
     }catch{
       if(ticket!==pointTicket)return;$('#panorama-status').textContent='Panorama could not load.';$('#panorama-retry').hidden=false;
     }finally{if(ticket===pointTicket)pano.setAttribute('aria-busy','false');}
   }
   function setPoints(){
     picker.replaceChildren();overlay.querySelectorAll('button').forEach(b=>b.remove());markers=[];
-    for(const data of selected.points){
+    for(const [index,data] of selected.points.entries()){
+      const number=index+1;
       for(const isMarker of [false,true]){
         const b=document.createElement('button');b.type='button';b.dataset.point=data.id;b.className=isMarker?'camera-marker':'point-choice';
-        b.textContent=isMarker?data.id:`${data.id}. ${data.label}`;b.setAttribute('aria-label',`${data.id}. ${data.label}`);
+        b.textContent=String(number);b.setAttribute('aria-label',`${number}. ${data.label}`);
         b.addEventListener('click',()=>selectPoint(data));(isMarker?overlay:picker).append(b);
         if(isMarker)markers.push({button:b,data});
       }
@@ -91,11 +91,11 @@ export async function initExplorer() {
   }
   async function selectScene(data){
     const ticket=++sceneTicket;++pointTicket;selected=data;point=null;viewer?.clear();delete viewport.dataset.loadedScene;
-    pano.hidden=true;$('#panorama-pending').hidden=false;$('.panorama-full').hidden=true;$('#panorama-retry').hidden=true;$('#panorama-status').textContent='';
+    pano.hidden=true;$('#panorama-pending').hidden=false;$('#panorama-retry').hidden=true;$('#panorama-status').textContent='';
     const sameOverview=overview.getAttribute('src')===data.overview.image;
     picker.replaceChildren();overlay.hidden=true;$('#gallery-status').textContent=sameOverview?'':'Loading image…';$('#gallery-retry').hidden=true;
     $('#selected-scene').textContent=`Scene ${data.id}`;$('#scene-count').textContent=`${String(scenes.indexOf(data)+1).padStart(2,'0')} / ${String(scenes.length).padStart(2,'0')} selected homes`;
-    $('#scene-quality-note').textContent=data.status==='ready'?`2K overview · ${Math.round((data.points[0]?.width||2048)/1024)}K panoramas`:data.status==='sample'?'8K panorama sample · remaining viewpoints pending':data.status==='preview'?'Previous scene preview · updated renders pending':'Updated scene renders pending';
+    $('#scene-quality-note').textContent=data.status==='ready'?`2K overview · ${Math.round((data.points[0]?.width||2048)/1024)}K panoramas`:data.status==='render-preview'?`8K panorama preview · ${data.points.length} viewpoints`:data.status==='sample'?'8K panorama sample · remaining viewpoints pending':data.status==='preview'?'Previous scene preview · updated renders pending':'Updated scene renders pending';
     for(const b of document.querySelectorAll('[data-scene]'))b.setAttribute('aria-pressed',String(b.dataset.scene===data.id));
     // Keep the default HTML preview visible; hide only a different home's old image.
     overview.hidden=!sameOverview;viewport.setAttribute('aria-busy','true');
@@ -120,11 +120,6 @@ export async function initExplorer() {
   }
   $('#gallery-retry').addEventListener('click',()=>selected?selectScene(selected):loadCatalog());
   $('#panorama-retry').addEventListener('click',()=>point&&selectPoint(point));
-  $('.panorama-full').addEventListener('click',()=>{
-    const dialog=$('#lightbox');$('#lightbox-image').hidden=true;$('#lightbox-caption').textContent=`Scene ${selected.id} · ${point.label}`;
-    dialog.classList.add('panorama-expanded');dialog.append(pano);dialog.showModal();document.body.style.overflow='hidden';
-  });
-  $('#lightbox').addEventListener('close',()=>{if(!$('#lightbox').classList.contains('panorama-expanded'))return;anchor.after(pano);$('#lightbox-image').hidden=false;$('#lightbox').classList.remove('panorama-expanded');});
   new ResizeObserver(layoutMarkers).observe(viewport);
   await loadCatalog();
 }
