@@ -1,0 +1,14 @@
+{
+  "name": "livin-benchmark-homepage",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LIVIN research homepage with original Blender renders",
+  "scripts": {
+    "dev": "python3 -m http.server 4173 --bind 0.0.0.0",
+    "check": "node --check app.js",
+    "build": "node scripts/build.mjs"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  }
+}

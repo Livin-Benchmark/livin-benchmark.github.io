@@ -1,0 +1,25 @@
+node_modules/
+dist/
+design/qa/
+*.blend1
+.DS_Store
+
+# Local rendering inputs and design studies
+design/
+assets/source-renders/
+*.blend
+*.png
+
+# Retired assets and experiments are retained locally, not published.
+archive/
+__pycache__/
+*.py[cod]
+
+# Local-only verification, rendering jobs and maintenance notes
+/tests/
+/docs/
+/SCENE_RENDERING.md
+/config/
+/scripts/*.py
+/assets/perception/images.json
+/assets/livin-paper.pdf

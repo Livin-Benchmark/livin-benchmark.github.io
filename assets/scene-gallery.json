@@ -1,0 +1,106 @@
+[
+  {
+    "id": "009",
+    "status": "sample",
+    "sourceVersion": "manual-source-user-confirmed-20261030",
+    "overview": {
+      "image": "assets/gallery/009-8k-sample/scene-009-overview.webp",
+      "width": 2048,
+      "height": 1422
+    },
+    "thumbnail": "assets/gallery/009-8k-sample/thumbnail.webp",
+    "defaultPoint": "1",
+    "points": [
+      {
+        "id": "1",
+        "label": "Living Room",
+        "room": "living_room",
+        "marker": [
+          0.5282519459724426,
+          0.5528037846088409
+        ],
+        "initialYaw": 0,
+        "image": "assets/gallery/009-8k-sample/scene-009-panorama-1.webp",
+        "width": 8192,
+        "height": 4096
+      }
+    ]
+  },
+  {
+    "id": "010",
+    "status": "pending",
+    "overview": {
+      "image": "assets/scene-010-overview.webp",
+      "width": 1440,
+      "height": 1000
+    },
+    "defaultPoint": null,
+    "points": []
+  },
+  {
+    "id": "012",
+    "status": "pending",
+    "overview": {
+      "image": "assets/scene-012-overview.webp",
+      "width": 1440,
+      "height": 1000
+    },
+    "defaultPoint": null,
+    "points": []
+  },
+  {
+    "id": "040",
+    "status": "pending",
+    "overview": {
+      "image": "assets/scene-040-overview.webp",
+      "width": 1440,
+      "height": 1000
+    },
+    "defaultPoint": null,
+    "points": []
+  },
+  {
+    "id": "087",
+    "status": "pending",
+    "overview": {
+      "image": "assets/scene-087-overview.webp",
+      "width": 1440,
+      "height": 1000
+    },
+    "defaultPoint": null,
+    "points": []
+  },
+  {
+    "id": "097",
+    "status": "pending",
+    "overview": {
+      "image": "assets/scene-097-overview.webp",
+      "width": 1440,
+      "height": 1000
+    },
+    "defaultPoint": null,
+    "points": []
+  },
+  {
+    "id": "148",
+    "status": "pending",
+    "overview": {
+      "image": "assets/scene-148-overview.webp",
+      "width": 1440,
+      "height": 1000
+    },
+    "defaultPoint": null,
+    "points": []
+  },
+  {
+    "id": "179",
+    "status": "pending",
+    "overview": {
+      "image": "assets/scene-179-overview.webp",
+      "width": 1440,
+      "height": 1000
+    },
+    "defaultPoint": null,
+    "points": []
+  }
+]

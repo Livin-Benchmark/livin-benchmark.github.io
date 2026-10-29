@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="LIVIN: digital twins of 30 lived-in homes for benchmarking spatial and embodied intelligence.">
+  <meta name="theme-color" content="#f8f6f1"><title>LIVIN — Digital Twins of Lived-in Homes</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
+  <link rel="preload" as="image" href="assets/livin-title-v14.webp">
+  <script type="module" src="app.js?v=benchmark-sections-1"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap"><a href="#" class="wordmark" aria-label="LIVIN home">LIVIN</a><nav aria-label="Main navigation"><a href="#scenes">Scenes</a><a class="benchmark-nav" href="#benchmark-3d">3D Perception</a><a class="benchmark-nav" href="#benchmark-navigation">Navigation</a><a class="benchmark-nav" href="#benchmark-loco-manipulation">Loco-Manipulation</a><a href="https://arxiv.org/pdf/2610.12069" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a></nav></header>
+<main id="main">
+<section class="hero wrap" aria-labelledby="hero-title">
+  <h1 id="hero-title"><span class="sr-only">LIVIN</span><img class="hero-art" src="assets/livin-title-v14.webp" width="3600" height="1200" alt="LIVIN letters filled with diverse household objects, with G1 seated on L, Go2 and R1 Pro between the letters, and H1 leaning against the right side of N" fetchpriority="high"></h1>
+  <p class="hero-description">
+    <span class="hero-subtitle-line">Benchmarking Spatial and Embodied Intelligence</span>
+    <span class="hero-subtitle-focus">in Digital Twins of Lived-In Homes</span>
+  </p>
+  <div class="actions" aria-label="Project resources">
+    <a class="button primary" href="https://arxiv.org/abs/2610.12069" target="_blank" rel="noopener">arXiv <span aria-hidden="true">↗</span></a>
+    <button class="button secondary resource-pending" type="button" disabled>Code <span class="resource-status">Coming Soon</span></button>
+    <button class="button secondary resource-pending" type="button" disabled>Dataset <span class="resource-status">Coming Soon</span></button>
+  </div>
+  <div class="hero-foot"><a href="#scenes" aria-label="Scroll to scenes">Scroll to explore <span aria-hidden="true">↓</span></a></div>
+</section>
+<section class="film-section wrap" id="film" aria-label="LIVIN showcase">
+  <video class="showcase-video" controls playsinline preload="none" poster="assets/livin-video-poster.webp" width="1920" height="1080" aria-label="LIVIN showcase: home interiors and robot activity">
+    <source src="assets/livin-demo.mp4" type="video/mp4">
+    Your browser does not support embedded video. <a href="assets/livin-demo.mp4">Watch the LIVIN film</a>.
+  </video>
+</section>
+<section class="scenes-section section wrap" id="scenes" aria-labelledby="scenes-title">
+  <div class="section-heading compact-section-heading"><h2 id="scenes-title" class="eyebrow">01 / LIVIN-Scenes</h2></div>
+  <div class="explorer-grid" id="scene-panel">
+    <div class="explorer-left">
+      <div class="gallery-toolbar"><p class="scene-label"><span class="status-dot"></span><span id="selected-scene">Scene 009</span></p></div>
+      <div class="scene-viewport" id="scene-viewport" aria-label="Scene overview and camera viewpoints">
+        <img id="main-scene" src="assets/gallery/009-8k-sample/scene-009-overview.webp" loading="lazy" width="2048" height="1422" alt="Scene 009 cutaway overview">
+        <div class="camera-markers" id="camera-markers"><svg class="marker-lines" aria-hidden="true"></svg></div>
+      </div>
+      <div class="gallery-state"><p id="gallery-status" role="status"></p><button id="gallery-retry" type="button" class="text-link" hidden>Retry scene</button></div>
+    </div>
+    <div class="viewpoint-detail">
+      <div class="point-picker" id="point-picker" role="group" aria-label="Select a viewpoint"></div>
+      <div class="panorama-view" id="panorama-view" hidden><img id="panorama-fallback" alt="Panorama of the selected camera point"></div>
+      <p id="panorama-pending" class="point-note">Updated scene panoramas are being prepared.</p>
+      <div class="viewpoint-actions">
+        <button type="button" class="panorama-full text-link" aria-label="Enlarge selected viewpoint render" hidden>Expand panorama ↗</button>
+        <span id="panorama-status" role="status"></span><button id="panorama-retry" class="text-link" type="button" hidden>Retry panorama</button>
+      </div>
+    </div>
+  </div>
+  <div class="thumbnail-row" aria-label="Select a home" id="scene-thumbnails"></div>
+  <p class="gallery-footnote"><span id="scene-count">01 / 08 selected homes</span><span id="scene-quality-note">Previous scene preview · updated renders pending</span></p>
+  <noscript><p>The scene overview is available above. Enable JavaScript to select other homes and viewpoints.</p></noscript>
+  <div class="stats" aria-label="Dataset statistics"><div><strong>30</strong><span>Lived-in homes</span></div><div><strong>319</strong><span>Rooms</span></div><div><strong>12000+</strong><span>Object instances</span></div><div><strong>1500+</strong><span>Articulated objects</span></div></div>
+</section>
+<section class="benchmark-section section" id="benchmarks" aria-labelledby="benchmarks-title"><div class="wrap">
+  <div class="section-heading compact-section-heading"><h2 id="benchmarks-title" class="eyebrow">02 / LIVIN-Bench</h2></div>
+  <article class="bench-feature benchmark-panel" id="benchmark-3d" aria-labelledby="benchmark-title-3d"><h3 id="benchmark-title-3d">3D Perception Benchmark</h3>
+<section class="perception-comparison" aria-labelledby="detection-title"><h4 id="detection-title">Detection</h4><div class="comparison-scroll" tabindex="0" role="region" aria-label="Detection method comparison"><table class="comparison-table"><thead><tr>
+<th scope="col">GT</th>
+<th scope="col">SceneScript</th>
+<th scope="col">EFM3D</th>
+<th scope="col">SpatialLM</th>
+<th scope="col">Boxer</th>
+</tr></thead><tbody>
+<tr aria-label="Example 1">
+<td><button type="button" class="comparison-image image-button" data-lightbox aria-label="Enlarge Detection, example 1, GT"><img src="assets/perception/detection-1-gt.webp" width="460" height="461" loading="lazy" alt="Detection, example 1, GT"></button></td>
+<td><button type="button" class="comparison-image image-button" data-lightbox aria-label="Enlarge Detection, example 1, SceneScript"><img src="assets/perception/detection-1-scenescript.webp" width="461" height="461" loading="lazy" alt="Detection, example 1, SceneScript"></button></td>
+<td><button type="button" class="comparison-image image-button" data-lightbox aria-label="Enlarge Detection, example 1, EFM3D"><img src="assets/perception/detection-1-efm3d.webp" width="460" height="461" loading="lazy" alt="Detection, example 1, EFM3D"></button></td>
+<td><button type="button" class="comparison-image image-button" data-lightbox aria-label="Enlarge Detection, example 1, SpatialLM"><img src="assets/perception/detection-1-spatiallm.webp" width="461" height="461" loading="lazy" alt="Detection, example 1, SpatialLM"></button></td>
+<td><button type="button" class="comparison-image image-button" data-lightbox aria-label="Enlarge Detection, example 1, Boxer"><img src="assets/perception/detection-1-boxer.webp" width="463" height="461" loading="lazy" alt="Detection, example 1, Boxer"></button></td>
+</tr>
+<tr aria-label="Example 2">
+<td><button type="button" class="comparison-image image-button" data-lightbox aria-label="Enlarge Detection, example 2, GT"><img src="assets/perception/detection-2-gt.webp" width="460" height="460" loading="lazy" alt="Detection, example 2, GT"></button></td>
+<td><button type="button" class="comparison-image image-button" data-lightbox aria-label="Enlarge Detection, example 2, SceneScript"><img src="assets/perception/detection-2-scenescript.webp" width="461" height="460" loading="lazy" alt="Detection, example 2, SceneScript"></button></td>
+<td><button type="button" class="comparison-image image-button" data-lightbox aria-label="Enlarge Detection, example 2, EFM3D"><img src="assets/perception/detection-2-efm3d.webp" width="460" height="460" loading="lazy" alt="Detection, example 2, EFM3D"></button></td>
+<td><button type="button" class="comparison-image image-button" data-lightbox aria-label="Enlarge Detection, example 2, SpatialLM"><img src="assets/perception/detection-2-spatiallm.webp" width="461" height="460" loading="lazy" alt="Detection, example 2, SpatialLM"></button></td>
+<td><button type="button" class="comparison-image image-button" data-lightbox aria-label="Enlarge Detection, example 2, Boxer"><img src="assets/perception/detection-2-boxer.webp" width="463" height="460" loading="lazy" alt="Detection, example 2, Boxer"></button></td>
+</tr>
+</tbody></table></div></section>
+<section class="perception-comparison" aria-labelledby="reconstruction-title"><h4 id="reconstruction-title">Reconstruction</h4><div class="comparison-scroll" tabindex="0" role="region" aria-label="Reconstruction method comparison"><table class="comparison-table"><thead><tr>
+<th scope="col">GT</th>
+<th scope="col">ShapeR</th>
+<th scope="col">Gen3DSR</th>
+<th scope="col">SAM3D</th>
+<th scope="col">RecGen</th>
+<th scope="col">Fire3D</th>
+</tr></thead><tbody>
+<tr aria-label="Example 1">
+<td><button type="button" class="comparison-image image-button" data-lightbox aria-label="Enlarge Reconstruction, example 1, GT"><img src="assets/perception/reconstruction-1-gt.webp" width="383" height="384" loading="lazy" alt="Reconstruction, example 1, GT"></button></td>
+<td><button type="button" class="comparison-image image-button" data-lightbox aria-label="Enlarge Reconstruction, example 1, ShapeR"><img src="assets/perception/reconstruction-1-shaper.webp" width="383" height="384" loading="lazy" alt="Reconstruction, example 1, ShapeR"></button></td>
+<td><button type="button" class="comparison-image image-button" data-lightbox aria-label="Enlarge Reconstruction, example 1, Gen3DSR"><img src="assets/perception/reconstruction-1-gen3dsr.webp" width="383" height="384" loading="lazy" alt="Reconstruction, example 1, Gen3DSR"></button></td>
+<td><button type="button" class="comparison-image image-button" data-lightbox aria-label="Enlarge Reconstruction, example 1, SAM3D"><img src="assets/perception/reconstruction-1-sam3d.webp" width="383" height="384" loading="lazy" alt="Reconstruction, example 1, SAM3D"></button></td>
+<td><button type="button" class="comparison-image image-button" data-lightbox aria-label="Enlarge Reconstruction, example 1, RecGen"><img src="assets/perception/reconstruction-1-recgen.webp" width="384" height="384" loading="lazy" alt="Reconstruction, example 1, RecGen"></button></td>
+<td><button type="button" class="comparison-image image-button" data-lightbox aria-label="Enlarge Reconstruction, example 1, Fire3D"><img src="assets/perception/reconstruction-1-fire3d.webp" width="385" height="384" loading="lazy" alt="Reconstruction, example 1, Fire3D"></button></td>
+</tr>
+<tr aria-label="Example 2">
+<td><button type="button" class="comparison-image image-button" data-lightbox aria-label="Enlarge Reconstruction, example 2, GT"><img src="assets/perception/reconstruction-2-gt.webp" width="383" height="385" loading="lazy" alt="Reconstruction, example 2, GT"></button></td>
+<td><button type="button" class="comparison-image image-button" data-lightbox aria-label="Enlarge Reconstruction, example 2, ShapeR"><img src="assets/perception/reconstruction-2-shaper.webp" width="383" height="385" loading="lazy" alt="Reconstruction, example 2, ShapeR"></button></td>
+<td><button type="button" class="comparison-image image-button" data-lightbox aria-label="Enlarge Reconstruction, example 2, Gen3DSR"><img src="assets/perception/reconstruction-2-gen3dsr.webp" width="383" height="385" loading="lazy" alt="Reconstruction, example 2, Gen3DSR"></button></td>
+<td><button type="button" class="comparison-image image-button" data-lightbox aria-label="Enlarge Reconstruction, example 2, SAM3D"><img src="assets/perception/reconstruction-2-sam3d.webp" width="383" height="385" loading="lazy" alt="Reconstruction, example 2, SAM3D"></button></td>
+<td><button type="button" class="comparison-image image-button" data-lightbox aria-label="Enlarge Reconstruction, example 2, RecGen"><img src="assets/perception/reconstruction-2-recgen.webp" width="384" height="385" loading="lazy" alt="Reconstruction, example 2, RecGen"></button></td>
+<td><button type="button" class="comparison-image image-button" data-lightbox aria-label="Enlarge Reconstruction, example 2, Fire3D"><img src="assets/perception/reconstruction-2-fire3d.webp" width="385" height="385" loading="lazy" alt="Reconstruction, example 2, Fire3D"></button></td>
+</tr>
+</tbody></table></div></section>
+</article>
+  <article class="bench-feature benchmark-panel" id="benchmark-navigation" aria-labelledby="benchmark-title-navigation">
+    <div class="bench-topline"><span class="small-badge">Coming Soon</span></div>
+    <h3 id="benchmark-title-navigation">Navigation</h3>
+    <button type="button" class="benchmark-image image-button" data-lightbox aria-label="Enlarge navigation task examples"><img src="assets/fig3-navigation.jpg" alt="Navigation task examples from the LIVIN paper" loading="lazy"></button>
+
+  </article>
+  <article class="bench-feature benchmark-panel" id="benchmark-loco-manipulation" aria-labelledby="benchmark-title-loco-manipulation">
+    <div class="bench-topline"><span class="small-badge">Coming Soon</span></div>
+    <h3 id="benchmark-title-loco-manipulation">Loco-Manipulation</h3>
+    <div class="manipulation-videos" aria-label="Loco-Manipulation demonstrations">
+      <video controls playsinline preload="none" poster="assets/locomanipulation/1-poster.webp" width="1920" height="1080" aria-label="Loco-Manipulation demonstration 1"><source src="assets/locomanipulation/1-web.mp4" type="video/mp4"></video>
+      <video controls playsinline preload="none" poster="assets/locomanipulation/2-poster.webp" width="1920" height="1080" aria-label="Loco-Manipulation demonstration 2"><source src="assets/locomanipulation/2-web.mp4" type="video/mp4"></video>
+      <video controls playsinline preload="none" poster="assets/locomanipulation/3-poster.webp" width="1920" height="1080" aria-label="Loco-Manipulation demonstration 3"><source src="assets/locomanipulation/3-web.mp4" type="video/mp4"></video>
+      <video controls playsinline preload="none" poster="assets/locomanipulation/4-poster.webp" width="1920" height="1080" aria-label="Loco-Manipulation demonstration 4"><source src="assets/locomanipulation/4-web.mp4" type="video/mp4"></video>
+    </div>
+
+  </article>
+</div></section>
+
+<section class="citation-section section wrap" id="bibtex" aria-labelledby="bibtex-title">
+  <div class="citation-heading"><div><p class="eyebrow">Citation</p><h2 id="bibtex-title">BibTeX</h2></div><button type="button" class="button secondary" id="copy-bibtex" hidden>Copy BibTeX</button></div>
+  <p class="citation-source">Citation metadata from <a href="https://arxiv.org/abs/2610.12069" target="_blank" rel="noopener">arXiv:2610.12069</a>.</p>
+  <pre class="citation-code" tabindex="0" aria-label="BibTeX citation"><code id="bibtex-code">@misc{xu2026livin,
+  title = {{LIVIN}: Benchmarking Spatial and Embodied Intelligence in Digital Twins of Lived-In Homes},
+  author = {Peijun Xu and Chuansen Nie and Yiyang He and Yinuo Bai and
+            Jingyang Liu and Kuixiang Shao and Yuyang Jiao and Kuanhao Xia and
+            Jiayi Zhu and Zitian Yang and Yanqi Zhang and Tianye Tan and
+            Shuwei Di and Junyi Xu and Jingyi Yu and Jiayuan Gu},
+  year = {2026},
+  eprint = {2610.12069},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CV},
+  doi = {10.48550/arXiv.2610.12069},
+  url = {https://arxiv.org/abs/2610.12069}
+}</code></pre>
+  <p class="citation-status" id="citation-status" role="status" aria-live="polite"></p>
+</section>
+</main>
+<footer class="wrap"><a href="#" class="wordmark" aria-label="Back to top">LIVIN<span class="brand-dot"></span></a><span>Bringing embodied intelligence home.</span><a href="#main">Back to top ↑</a></footer>
+<dialog id="lightbox" aria-label="Expanded scene image"><div class="lightbox-bar"><span id="lightbox-caption"></span><button type="button" id="close-lightbox" aria-label="Close enlarged image">Close ×</button></div><img id="lightbox-image" alt=""></dialog>
+</body>
+</html>
